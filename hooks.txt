@@ -1,0 +1,66 @@
+USE REDUCER:
+The useReducer hook is similar to useState, but gives us a more structured approach for updating complex values.
+
+We typically use useReducer when our state has multiple sub-values, e.g. an object containing keys that we want to update independently.
+
+API
+The useReducer hook requires 2 arguments, and has an optional 3rd argument:
+
+reducer - a pure function that takes a state and an action, and returns a new state value based on the action
+initialState - any initial state value, just like useState
+initializer (optional) - this is uncommon, but we'll briefly introduce it later.
+The useReducer hook returns the current state, and a dispatch function to update the state.
+//...................................................................//////
+useEffect Vs useLayoutEffect:
+The difference between useEffect hook and useLayoutEffect hook is in the timing of their invocation. 
+useEffect hook is invoked after the DOM has been painted.
+ useLayoutEffect hook on the other hand is invoked synchronously before changes are painted on the screen.
+
+//...............................................................................///////
+USE FETCH:
+When you have component logic that needs to be used by multiple components, we can extract that logic to a custom Hook.
+
+Custom Hooks start with "use". Example: useFetch.
+
+//.....................................................................................///
+
+
+uSE SELECTOR :
+useSelector works as a function and takes in the state and then returns whatever data you want from it.
+ Almost like ‘selecting’ which part of the state you want!
+When the component renders, useSelector will go into the store and return whatever the values are for the first and last name. 
+These could be configured when setting up the initialState of the application.
+///...................................................................................///
+
+
+USE DISPATCH:
+Once the actions have been dispatched, the state has been updated with the new names but they haven’t been displayed yet. This is where useSelector comes in.
+
+useSelector goes into the store, and returns the specific state that we want, being our two name values. The names are now displayed on the component.
+
+
+
+//..............................................................................////
+
+->Using react.memo will cause React to skip rendering a component if its props have not changed.
+
+This can improve performance.
+
+
+-> Use memo return memoized value while usecallback returns memoized function
+
+//////////////......................................................../////////////////////////
+useFocusEffect
+Sometimes we want to run side-effects when a screen is focused. 
+A side effect may involve things like adding an event listener, fetching data, updating document title, etc. 
+While this can be achieved using focus and blur events, it's not very ergonomic.
+
+
+//.........................................................................//////////////
+useREF:
+
+
+////////////..........................................................////////////////
+REACT HOOK FORM
+
+https://akashmittal.com/react-native-forms-using-react-hook-form/
